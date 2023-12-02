@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saturn Status</title>
+</head>
+<body style="text-align: center;">
+    <h1>{{ attrs['Name'] }}</h1>
+    <h2>{{ attrs['MachineName'] }}, {{ status['CurrentStatus'] }}</h2>
+    <h2>{{print_info['Filename']}}, {{ print_info['Status'] }}</h2>
+    <h2>Layers: {{ print_info['CurrentLayer'] }} / {{print_info['TotalLayer']}}</h2>
+    <h2>Time: {{ currentTime }} / {{totalTime}}</h2>
+</body>
+</html>
+
+
+<!-- for i, p in enumerate(printers):
+        print(p.describe())
+        attrs = p.desc['Data']['Attributes']
+        status = p.desc['Data']['Status']
+        print_info = status['PrintInfo']
+        file_info = status['FileTransferInfo']
+        print(f"{p.addr[0]}: {attrs['Name']} ({attrs['MachineName']})  Status: {status['CurrentStatus']}")
+        print(f"          Print Status: {print_info['Status']} Layers: {print_info['CurrentLayer']}/{print_info['TotalLayer']} File: {print_info['Filename']}")
+        print(f"  File Transfer Status: {file_info['Status']}")
+        print(f"  TotalTicks: {print_info['TotalTicks']}, CurrentTicks: {print_info['CurrentTicks']}")
+
+        totalTime = datetime.timedelta(milliseconds= print_info['TotalTicks'])
+        currentTime = datetime.timedelta(milliseconds = print_info['CurrentTicks'])
+
+        #print(f"  ConvTotal: {tticks.strftime("%Y-%m-%d %H:%M:%S")}, ConvCurrentTicks: {cticks.strftime("%Y-%m-%d %H:%M:%S")}")
+        print(f"  ConvTotal: {str(tticks)}, ConvCurrentTicks: {str(cticks)}") -->
